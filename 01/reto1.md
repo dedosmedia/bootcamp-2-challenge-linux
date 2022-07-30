@@ -14,6 +14,16 @@ Donde file1.txt debe contener el siguiente texto:
 `Me encanta bash!!`
 Y file2.txt debe permanecer vacío.
 
+
+Solución:
+```
+mkdir -p foo/empty
+mkdir -p foo/dummy
+touch foo/dummy/file1.txt
+touch foo/dummy/file2.txt
+echo -e "Me encanta bash"  >> foo/dummy/file1.txt
+```
+
 ## Ejercicio 2 - Manejo de contenido de archivos
 
 Mediante comandos de bash, vuelca el contenido de file1.txt a file2.txt y mueve file2.txt a la carpeta empty.
@@ -27,6 +37,12 @@ foo/
 ```
 Donde file1.txt y file2.txt deben contener el siguiente texto:
 `Me encanta bash!!`
+
+Solución:
+```
+cat foo/dummy/file1.txt >> foo/dummy/file2.txt
+cp foo/dummy/file2.txt foo/empty
+```
 
 ### Ejercicio 3 - Argumentos del script
 
