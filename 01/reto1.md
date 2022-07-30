@@ -41,7 +41,7 @@ Donde file1.txt y file2.txt deben contener el siguiente texto:
 Solución:
 ```
 cat foo/dummy/file1.txt >> foo/dummy/file2.txt
-cp foo/dummy/file2.txt foo/empty
+mv foo/dummy/file2.txt foo/empty
 ```
 
 ### Ejercicio 3 - Argumentos del script
